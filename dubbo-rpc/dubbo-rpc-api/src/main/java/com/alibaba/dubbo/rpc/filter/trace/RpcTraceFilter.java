@@ -9,7 +9,6 @@ import com.unionpaysmart.shaker.dapper.EndPoint;
 import com.unionpaysmart.shaker.dapper.ExceptionType;
 import com.unionpaysmart.shaker.dapper.Span;
 import com.unionpaysmart.veno.generater.IncrementIdGen;
-import com.unionpaysmart.veno.generater.UniqueIdGen;
 import com.unionpaysmart.veno.trace.Tracer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,7 +42,7 @@ public class RpcTraceFilter implements Filter {
         RpcInvocation rpcInvocation = (RpcInvocation) invocation;
 
         //　设计的serviceId, 最前一位防止存入hbase的数据分散不均匀
-        String serviceId = id + Constants.UNDER_LINE + context.getUrl().getServiceInterface() + Constants.UNDER_LINE + methodName;
+        String serviceId = context.getUrl().getServiceInterface() + Constants.UNDER_LINE + methodName;
 
         Tracer tracer = Tracer.getInstance();
 
