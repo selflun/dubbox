@@ -29,7 +29,7 @@
 		<skip_maven_deploy>false</skip_maven_deploy>
 	</properties>
 	<dependencies>
-		<dependency>g
+		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo-common</artifactId>
 			<version>${project.parent.version}</version>
