@@ -5,20 +5,15 @@
  *
  * DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
  */
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.EnumMap;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.EnumSet;
-import java.util.Collections;
-import java.util.BitSet;
-import java.nio.ByteBuffer;
-import java.util.Arrays;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Collections;
+import java.util.EnumMap;
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Map;
 
 public class $__ClassNameTestDubboStub {
 
@@ -48,11 +43,16 @@ public class $__ClassNameTestDubboStub {
         super("echo");
       }
 
-      protected echo_args getEmptyArgsInstance() {
+      public echo_args getEmptyArgsInstance() {
         return new echo_args();
       }
 
-      protected echo_result getResult(I iface, echo_args args) throws org.apache.thrift.TException {
+      @Override
+      protected boolean isOneway() {
+        return false;
+      }
+
+      public echo_result getResult(I iface, echo_args args) throws org.apache.thrift.TException {
         echo_result result = new echo_result();
         result.success = iface.echo(args.arg);
         return result;

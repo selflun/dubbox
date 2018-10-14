@@ -7,20 +7,15 @@
  */
 package com.alibaba.dubbo.rpc.gen.dubbo;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.EnumMap;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.EnumSet;
-import java.util.Collections;
-import java.util.BitSet;
-import java.nio.ByteBuffer;
-import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.BitSet;
+import java.util.Collections;
+import java.util.EnumMap;
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Map;
 
 public class $__DemoStub {
 
@@ -68,11 +63,16 @@ public class $__DemoStub {
         super("echoBool");
       }
 
-      protected echoBool_args getEmptyArgsInstance() {
+      public echoBool_args getEmptyArgsInstance() {
         return new echoBool_args();
       }
 
-      protected echoBool_result getResult(I iface, echoBool_args args) throws org.apache.thrift.TException {
+      @Override
+      protected boolean isOneway() {
+        return false;
+      }
+
+      public echoBool_result getResult(I iface, echoBool_args args) throws org.apache.thrift.TException {
         echoBool_result result = new echoBool_result();
         result.success = iface.echoBool(args.arg);
         result.setSuccessIsSet(true);
@@ -85,11 +85,16 @@ public class $__DemoStub {
         super("echoByte");
       }
 
-      protected echoByte_args getEmptyArgsInstance() {
+      public echoByte_args getEmptyArgsInstance() {
         return new echoByte_args();
       }
 
-      protected echoByte_result getResult(I iface, echoByte_args args) throws org.apache.thrift.TException {
+      @Override
+      protected boolean isOneway() {
+        return false;
+      }
+
+      public echoByte_result getResult(I iface, echoByte_args args) throws org.apache.thrift.TException {
         echoByte_result result = new echoByte_result();
         result.success = iface.echoByte(args.arg);
         result.setSuccessIsSet(true);
@@ -102,11 +107,16 @@ public class $__DemoStub {
         super("echoI16");
       }
 
-      protected echoI16_args getEmptyArgsInstance() {
+      public echoI16_args getEmptyArgsInstance() {
         return new echoI16_args();
       }
 
-      protected echoI16_result getResult(I iface, echoI16_args args) throws org.apache.thrift.TException {
+      @Override
+      protected boolean isOneway() {
+        return false;
+      }
+
+      public echoI16_result getResult(I iface, echoI16_args args) throws org.apache.thrift.TException {
         echoI16_result result = new echoI16_result();
         result.success = iface.echoI16(args.arg);
         result.setSuccessIsSet(true);
@@ -119,11 +129,16 @@ public class $__DemoStub {
         super("echoI32");
       }
 
-      protected echoI32_args getEmptyArgsInstance() {
+      public echoI32_args getEmptyArgsInstance() {
         return new echoI32_args();
       }
 
-      protected echoI32_result getResult(I iface, echoI32_args args) throws org.apache.thrift.TException {
+      @Override
+      protected boolean isOneway() {
+        return false;
+      }
+
+      public echoI32_result getResult(I iface, echoI32_args args) throws org.apache.thrift.TException {
         echoI32_result result = new echoI32_result();
         result.success = iface.echoI32(args.arg);
         result.setSuccessIsSet(true);
@@ -136,11 +151,16 @@ public class $__DemoStub {
         super("echoI64");
       }
 
-      protected echoI64_args getEmptyArgsInstance() {
+      public echoI64_args getEmptyArgsInstance() {
         return new echoI64_args();
       }
 
-      protected echoI64_result getResult(I iface, echoI64_args args) throws org.apache.thrift.TException {
+      @Override
+      protected boolean isOneway() {
+        return false;
+      }
+
+      public echoI64_result getResult(I iface, echoI64_args args) throws org.apache.thrift.TException {
         echoI64_result result = new echoI64_result();
         result.success = iface.echoI64(args.arg);
         result.setSuccessIsSet(true);
@@ -153,11 +173,16 @@ public class $__DemoStub {
         super("echoDouble");
       }
 
-      protected echoDouble_args getEmptyArgsInstance() {
+      public echoDouble_args getEmptyArgsInstance() {
         return new echoDouble_args();
       }
 
-      protected echoDouble_result getResult(I iface, echoDouble_args args) throws org.apache.thrift.TException {
+      @Override
+      protected boolean isOneway() {
+        return false;
+      }
+
+      public echoDouble_result getResult(I iface, echoDouble_args args) throws org.apache.thrift.TException {
         echoDouble_result result = new echoDouble_result();
         result.success = iface.echoDouble(args.arg);
         result.setSuccessIsSet(true);
@@ -170,11 +195,16 @@ public class $__DemoStub {
         super("echoString");
       }
 
-      protected echoString_args getEmptyArgsInstance() {
+      public echoString_args getEmptyArgsInstance() {
         return new echoString_args();
       }
 
-      protected echoString_result getResult(I iface, echoString_args args) throws org.apache.thrift.TException {
+      @Override
+      protected boolean isOneway() {
+        return false;
+      }
+
+      public echoString_result getResult(I iface, echoString_args args) throws org.apache.thrift.TException {
         echoString_result result = new echoString_result();
         result.success = iface.echoString(args.arg);
         return result;
