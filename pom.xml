@@ -719,12 +719,12 @@
     <repository>
       <id>releases</id>
       <name>releases</name>
-      <url>http://192.168.88.8:8081/nexus/content/repositories/releases</url>
+      <url>http://127.0.0.1:8081/repository/3rd-releases</url>
     </repository>
     <snapshotRepository>
-      <id>Snapshots</id>
-      <name>Snapshots</name>
-      <url>http://192.168.88.8:8081/nexus/content/repositories/snapshots</url>
+      <id>snapshots</id>
+      <name>snapshots</name>
+      <url>http://127.0.0.1:8081/repository/3rd-snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 
